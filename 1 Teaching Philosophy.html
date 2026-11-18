@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How I Teach. What I Value.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1C1F2B;
+    --ink-soft:#37352F;
+    --paper:#F7F7F4;
+    --panel:#FFFFFF;
+    --line:#E4E3DD;
+    --c1:#4FA893;
+    --c1-tint:#BFE9DE;
+    --c2:#8189D6;
+    --c2-tint:#C8CBF0;
+    --c3:#D283A8;
+    --c3-tint:#F2C9DD;
+    --c4:#7BAE63;
+    --c4-tint:#CBE6BB;
+    --c5:#D6A13C;
+    --c5-tint:#F2D89B;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:transparent;
+    color:var(--ink);
+    font-family:'Source Serif 4',Georgia,'Times New Roman',serif;
+    font-size:13px;
+    -webkit-font-smoothing:antialiased;
+    padding:16px 12px;
+  }
+  .wrap{max-width:none;margin:0;}
+  .card{
+    background:#F5F1FA;
+    border:1px solid #E4DCF0;
+    border-radius:18px;
+    box-shadow:0 1px 2px rgba(20,20,15,.04), 0 8px 24px rgba(20,20,15,.06);
+    overflow:hidden;
+  }
+  .card-stripe{
+    height:6px;
+    background:linear-gradient(90deg, var(--c1) 0 20%, var(--c2) 20% 40%, var(--c3) 40% 60%, var(--c4) 60% 80%, var(--c5) 80% 100%);
+  }
+  .card-body{padding:28px 28px 32px;}
+  .eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;margin:0 0 6px;}
+  h1{font-family:'Source Serif 4',Georgia,serif;font-weight:600;font-size:clamp(28px,4.5vw,34px);line-height:1.15;margin:0 0 4px;letter-spacing:-0.01em;}
+  .lede{font-size:16px;color:var(--ink-soft);margin:0 0 24px;line-height:1.6;max-width:none;}
+  .hint{font-size:13px;color:var(--ink-soft);opacity:.7;font-style:italic;margin:0 0 12px;}
+  .tabs{display:flex;flex-wrap:wrap;gap:8px;border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:0;}
+  .tab{
+    appearance:none;border:1.5px solid transparent;background:var(--tint,var(--panel));color:var(--ink);
+    font-family:'Source Serif 4',Georgia,'Times New Roman',serif;font-size:15px;font-weight:600;
+    padding:9px 14px;border-radius:999px;cursor:pointer;display:flex;align-items:center;gap:7px;
+    transition:border-color .15s ease, color .15s ease, background .15s ease, transform .1s ease, box-shadow .15s ease;
+    white-space:nowrap;
+  }
+  .tab .dot{width:8px;height:8px;border-radius:50%;background:var(--dot,var(--ink-soft));flex:none;}
+  .tab:hover{border-color:var(--accent,var(--ink-soft));}
+  .tab:focus-visible{outline:2px solid var(--ink); outline-offset:2px;}
+  .tab[aria-selected="true"]{color:var(--ink);border-color:var(--accent,var(--ink));box-shadow:0 2px 6px rgba(0,0,0,.08);font-weight:700;}
+  .tab:active{transform:translateY(1px);}
+  .panel{display:none;background:var(--panel);border:1px solid var(--line);border-top:none;border-radius:0 0 12px 12px;padding:26px 26px 24px;}
+  .panel[data-active="true"]{display:block;}
+  .panel-head{display:flex;align-items:center;gap:12px;margin-bottom:12px;}
+  .icon{width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;background:var(--tint);color:var(--accent);flex:none;}
+  .icon svg{width:20px;height:20px;stroke:var(--accent);}
+  .panel h2{font-family:'Source Serif 4',Georgia,serif;font-weight:600;font-size:24px;margin:0;color:var(--ink);}
+  .panel-tagline{font-size:12.5px;text-transform:uppercase;letter-spacing:.06em;font-weight:600;color:var(--accent);margin:2px 0 0;}
+  .panel p.body{font-size:16.5px;line-height:1.7;color:var(--ink-soft);margin:0;border-left:2px solid var(--accent);padding-left:16px;}
+  @media (max-width:520px){
+    .tabs{gap:6px;}
+    .tab{padding:8px 11px;}
+    .panel{padding:20px 18px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="card">
+<div class="card-stripe"></div>
+<div class="card-body">
+  <p class="eyebrow">Teaching Philosophy — In Practice</p>
+  <h1>Translation and interpreting aren't mastered. They're earned.</h1>
+  <p class="lede">One messy, real-world decision at a time. Here's how that belief shows up in five ways, in every class.</p>
+  <p class="hint">👇 Tap each one to see how it plays out</p>
+
+  <div class="tabs" role="tablist" aria-label="Teaching values">
+    <button class="tab" role="tab" id="tab-1" aria-controls="panel-1" aria-selected="true" style="--accent:var(--c1);--tint:var(--c1-tint);--dot:var(--c1);"><span class="dot"></span>Student-Centred</button>
+    <button class="tab" role="tab" id="tab-2" aria-controls="panel-2" aria-selected="false" style="--accent:var(--c2);--tint:var(--c2-tint);--dot:var(--c2);"><span class="dot"></span>Clear &amp; Structured</button>
+    <button class="tab" role="tab" id="tab-3" aria-controls="panel-3" aria-selected="false" style="--accent:var(--c3);--tint:var(--c3-tint);--dot:var(--c3);"><span class="dot"></span>Practical &amp; Engaging</button>
+    <button class="tab" role="tab" id="tab-4" aria-controls="panel-4" aria-selected="false" style="--accent:var(--c4);--tint:var(--c4-tint);--dot:var(--c4);"><span class="dot"></span>Real-World Focus</button>
+    <button class="tab" role="tab" id="tab-5" aria-controls="panel-5" aria-selected="false" style="--accent:var(--c5);--tint:var(--c5-tint);--dot:var(--c5);"><span class="dot"></span>Industry Ready</button>
+  </div>
+
+  <div class="panel" id="panel-1" role="tabpanel" aria-labelledby="tab-1" data-active="true" style="--accent:var(--c1);--tint:var(--c1-tint);">
+    <div class="panel-head">
+      <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.5c-1.8-1.4-4.2-2-6.5-1.7v12c2.3-.3 4.7.3 6.5 1.7 1.8-1.4 4.2-2 6.5-1.7v-12c-2.3-.3-4.7.3-6.5 1.7Z"/><path d="M12 6.5v12"/></svg></span>
+      <div><p class="panel-tagline">Safe to get it wrong</p><h2>Student-Centred</h2></div>
+    </div>
+    <p class="body">I keep it student-centred, so everyone feels safe enough to try, stumble, and try again. I listen first, support without judgment, and build a room where getting it wrong out loud is how people actually learn.</p>
+  </div>
+
+  <div class="panel" id="panel-2" role="tabpanel" aria-labelledby="tab-2" data-active="false" style="--accent:var(--c2);--tint:var(--c2-tint);">
+    <div class="panel-head">
+      <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 3.5h6v2.2H9z"/><path d="M8.5 11h7M8.5 14.5h7M8.5 18h4.5"/></svg></span>
+      <div><p class="panel-tagline">No jargon, no guesswork</p><h2>Clear &amp; Structured</h2></div>
+    </div>
+    <p class="body">I keep it clear and structured, breaking down complex ideas with scaffolding instead of jargon. Nothing gets left as "figure it out yourself", every hard concept gets a way in.</p>
+  </div>
+
+  <div class="panel" id="panel-3" role="tabpanel" aria-labelledby="tab-3" data-active="false" style="--accent:var(--c3);--tint:var(--c3-tint);">
+    <div class="panel-head">
+      <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4.5a2 2 0 1 1 3.5 1.3c-.3.4-.5.9-.5 1.4V8h2.7c.5 0 1-.2 1.4-.5A2 2 0 1 1 17.5 11c-.4-.3-.9-.5-1.4-.5H14v2.7c0 .5.2 1 .5 1.4A2 2 0 1 1 11 16c.3-.4.5-.9.5-1.4V12H8.8c-.5 0-1 .2-1.4.5A2 2 0 1 1 6.5 9c.4.3.9.5 1.4.5H10V6.2c0-.5-.2-1-.5-1.4A2 2 0 0 1 9 4.5Z"/></svg></span>
+      <div><p class="panel-tagline">Live scenarios, not static slides</p><h2>Practical &amp; Engaging</h2></div>
+    </div>
+    <p class="body">I keep it practical and engaging, mixing real tools and live scenarios instead of static textbook examples. If it doesn't feel like real work, it doesn't stick.</p>
+  </div>
+
+  <div class="panel" id="panel-4" role="tabpanel" aria-labelledby="tab-4" data-active="false" style="--accent:var(--c4);--tint:var(--c4-tint);">
+    <div class="panel-head">
+      <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M4 12h16M12 4c2 2.3 3 5.1 3 8s-1 5.7-3 8c-2-2.3-3-5.1-3-8s1-5.7 3-8Z"/></svg></span>
+      <div><p class="panel-tagline">Straight from the field</p><h2>Real-World Focus</h2></div>
+    </div>
+    <p class="body">I stay real-world focused, pulling straight from my own industry work in translation and interpreting. What I bring to class isn't theory I read about, it's work I did last week.</p>
+  </div>
+
+  <div class="panel" id="panel-5" role="tabpanel" aria-labelledby="tab-5" data-active="false" style="--accent:var(--c5);--tint:var(--c5-tint);">
+    <div class="panel-head">
+      <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="11" rx="2"/><path d="M9 8V6.5A2.5 2.5 0 0 1 11.5 4h1A2.5 2.5 0 0 1 15 6.5V8"/><path d="M4 13h16"/></svg></span>
+      <div><p class="panel-tagline">Not just a passing grade</p><h2>Industry Ready</h2></div>
+    </div>
+    <p class="body">Ultimately, I'm building students who are industry ready, not just academically ready. The proof isn't a grade sheet, it's watching them go from "I hope this is right" to confidently defending their choices.</p>
+  </div>
+</div>
+</div>
+</div>
+
+<script>
+  const tabs = Array.from(document.querySelectorAll('.tab'));
+  const panels = Array.from(document.querySelectorAll('.panel'));
+  function activate(index){
+    tabs.forEach((t,i)=>{ t.setAttribute('aria-selected', i === index ? 'true' : 'false'); });
+    panels.forEach((p,i)=>{ p.setAttribute('data-active', i === index ? 'true' : 'false'); });
+  }
+  tabs.forEach((t,i)=>{
+    t.addEventListener('click', ()=>activate(i));
+    t.addEventListener('keydown', (e)=>{
+      if(e.key === 'ArrowRight'){ e.preventDefault(); const n=(i+1)%tabs.length; tabs[n].focus(); activate(n); }
+      if(e.key === 'ArrowLeft'){ e.preventDefault(); const n=(i-1+tabs.length)%tabs.length; tabs[n].focus(); activate(n); }
+    });
+  });
+</script>
+</body>
+</html>
